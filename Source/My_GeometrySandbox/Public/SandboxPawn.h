@@ -27,9 +27,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* CameraComponent;
 
-
 	UPROPERTY(EditAnywhere)
 	float Velocity = 300.f;
+
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void UnPossessed() override;
 
 protected:
 	// Called when the game starts or when spawned
